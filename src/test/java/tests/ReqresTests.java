@@ -21,8 +21,8 @@ public class ReqresTests {
                 .when()
                 .get("/api/unknown/2")
                 .then()
-                .statusCode(200)
                 .log().body()
+                .statusCode(200)
                 .body("support.url",
                         is("https://reqres.in/#support-heading"));
 

@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,5 +19,4 @@ public class FileUtil {
     public static String readStringFromFile(String filePath) {
         return new String(readBytesFromFile(filePath));
     }
-
 }

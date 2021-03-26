@@ -5,7 +5,7 @@ import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static Utils.FileUtil.readStringFromFile;
+import static utils.FileUtil.readStringFromFile;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
@@ -26,12 +26,11 @@ public class ReqresTests {
                 .then()
                 .log().body()
                 .statusCode(200)
-                .body("support.url",
-                        is("https://reqres.in/#support-heading"));
+                .body("support.url", is("https://reqres.in/#support-heading"));
     }
 
     @Test
-    void requestApiUsersTest() {
+    void createUsersTest() {
         String data = readStringFromFile("./src/test/resources/Login_data.txt");
         given()
                 .contentType(JSON)
@@ -72,7 +71,7 @@ public class ReqresTests {
     }
 
     @Test
-    void unsuccessLoginTest() {
+    void failedLoginTest() {
         given()
                 .contentType(JSON)
                 .body("{\"email\": \"peter@klaven\"}")

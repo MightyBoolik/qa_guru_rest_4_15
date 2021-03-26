@@ -1,0 +1,11 @@
+## https://reqres.in/
+## Requests:
+1.**GET** SINGLE RESOURCE
+
+2.**POST** CREATE
+
+3.**POST**LOGIN SUCCESSFUL
+
+4.**GET**SIGLE USER
+
+5.**POST**LOGIN UNSUCCESSFUL

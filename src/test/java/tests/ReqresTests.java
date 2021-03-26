@@ -45,7 +45,7 @@ public class ReqresTests {
     }
 
     @Test
-    void succesfullLoginTest() {
+    void succesfulLoginTest() {
         String data1 = readStringFromFile("./src/test/resources/For_login.txt");
         given()
                 .contentType(JSON)
@@ -72,7 +72,7 @@ public class ReqresTests {
     }
 
     @Test
-    void unsuccesLoginTest() {
+    void unsuccessLoginTest() {
         given()
                 .contentType(JSON)
                 .body("{\"email\": \"peter@klaven\"}")
